@@ -3,6 +3,11 @@
 
 <head>
 <?php wp_head(); // Hook required for scripts, styles, and other <head> items. ?>
+
+<?php if(preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT'])) { ?>
+<link rel='stylesheet' id='style-css-ie8'  href='<?php bloginfo('template_directory'); ?>/ie8.css' type='text/css' media='all' />
+<?php } ?>
+
 </head>
 
 <body <?php hybrid_attr( 'body' ); ?>>
@@ -19,15 +24,16 @@
 
 					<div id="branding">
 						<?php hybrid_site_title(); ?>
+<!--
 						<?php hybrid_site_description(); ?>
+-->
 					</div><!-- #branding -->
 
 				<?php endif; // End check for header text. ?>
 
 				<?php hybrid_get_menu( 'secondary' ); // Loads the menu/secondary.php template. ?>
-
 			</header><!-- #header -->
-
+            <?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
 			<?php if ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
 
 				<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
@@ -41,4 +47,4 @@
 			<div id="main" class="main">
 
 				<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
-				<?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
+				

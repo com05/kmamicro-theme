@@ -1,0 +1,13 @@
+#menu-primary, 
+#menu-primary .search-form > div, 
+.audio-shortcode-wrap, 
+.media-shortcode-extend .media-info, 
+.media-info-toggle, 
+.entry-content .media-info-toggle, 
+.wp-audio-shortcode.mejs-container, 
+.mejs-controls, 
+.mejs-volume-button .mejs-volume-slider, 
+.mejs-time-rail .mejs-time-float, 
+.wp-playlist-dark {
+    background-color: #252525;
+}
