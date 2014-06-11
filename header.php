@@ -5,9 +5,12 @@
 <?php wp_head(); // Hook required for scripts, styles, and other <head> items. ?>
 
 <?php if(preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT'])) { ?>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <link rel='stylesheet' id='style-css-ie8'  href='<?php bloginfo('template_directory'); ?>/ie8.css' type='text/css' media='all' />
 <?php } ?>
-
+<?php if(preg_match('/(?i)msie [1-7]/',$_SERVER['HTTP_USER_AGENT'])) { ?>
+<link rel='stylesheet' id='style-css-ie7'  href='<?php bloginfo('template_directory'); ?>/ie7.css' type='text/css' media='all' />
+<?php } ?>
 </head>
 
 <body <?php hybrid_attr( 'body' ); ?>>

@@ -80,11 +80,6 @@
  * is essentially the foundation for the entire design.
  ********************************************************************************************************/
 
-article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,section,summary { 
-    display:block;
-}
-
-
 body { overflow-x: hidden; }
 
 		/* === Descendants of #container === */
@@ -923,6 +918,8 @@ blockquote::before,
 	#menu-social li a[href*="wordpress.org"]::before,
 	#menu-social li a[href*="wordpress.com"]::before   { content: '\f205'; color: #21759b; }
 	#menu-social li a[href*="youtube.com"]::before     { content: '\f213'; color: #c4302b; }
+
+html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cccccc;padding: 3px 3px;background-color: #f7f7f7; }
 
 	/* Breadcrumb Trail. */
 
