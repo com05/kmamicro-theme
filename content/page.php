@@ -1,11 +1,11 @@
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( is_page() ) : // If viewing a single page. ?>
-
+<?php if (FALSE) : ?>
 		<header class="entry-header">
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 		</header><!-- .entry-header -->
-
+<?php endif; ?>
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>

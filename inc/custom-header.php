@@ -27,8 +27,8 @@ function stargazer_custom_header_setup() {
 		array(
 			'default-image'          => '%s/images/headers/orange-burn.jpg',
 			'random-default'         => false,
-			'width'                  => 1175,
-			'height'                 => 400,
+			'width'                  => 255,
+			'height'                 => 53,
 			'flex-width'             => true,
 			'flex-height'            => true,
 			'default-text-color'     => '252525',

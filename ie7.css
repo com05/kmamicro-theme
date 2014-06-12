@@ -1,5 +1,6 @@
 /* === ie7 === */
 #container #menu-primary li,
-#container #menu-secondary li {
+#container #menu-secondary li,
+#container #menu-mfooter li {
     display: inline;
 }

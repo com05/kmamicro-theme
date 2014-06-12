@@ -84,6 +84,7 @@ function stargazer_register_menus() {
 	register_nav_menu( 'primary',   _x( 'Primary',   'nav menu location', 'stargazer' ) );
 	register_nav_menu( 'secondary', _x( 'Secondary', 'nav menu location', 'stargazer' ) );
 	register_nav_menu( 'social',    _x( 'Social',    'nav menu location', 'stargazer' ) );
+    register_nav_menu( 'mfooter',    _x( 'footerMenu',    'nav menu location', 'stargazer' ) );
 }
 
 /**

@@ -1,3 +1,42 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+
+  font-family: 'NanumGothicBold';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot);
+
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff2) format('woff2'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.woff) format('woff'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Bold.ttf) format('truetype');
+
+}
+@font-face {
+
+  font-family: 'NanumGothicExtraBold';
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.eot);
+
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff2) format('woff2'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff) format('woff'),
+
+      url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.ttf) format('truetype');
+
+}
 /**
  * Theme Name:  Stargazer
  * Theme URI:   http://themehybrid.com/themes/stargazer
@@ -87,24 +126,24 @@ body { overflow-x: hidden; }
 		#container     > .wrap,
 		#footer        > .wrap,
 		#menu-primary > .wrap {
-			max-width: 1025px;
+			max-width: 1280px;
 			margin:    0 auto;
 
 			box-sizing: border-box;
 		}
 
-		#menu-primary > .wrap,
 		#footer        > .wrap {
-			max-width:     1175px;
-			padding-left:  25px;
-			padding-right: 25px;
+			max-width:     1280px;
 		}
+		#menu-primary > .wrap {
+    max-width:     1280px;
+}
 
 
 			#menu-primary > .wrap { position: relative; }
 
 			.custom-background #container > .wrap {
-				max-width:     1175px;
+				max-width:     1280px;
 				margin-top:    0px;
 				margin-bottom: 0px;
 			}
@@ -237,8 +276,8 @@ body { overflow-x: hidden; }
 /* === Body === */
 
 body {
-	border-top:    2px solid;
-	border-bottom: 2px solid;
+	border-top:    none;
+	border-bottom: none;
 }
 
 /* === Links === */
@@ -591,11 +630,13 @@ img {
 }
 
 	a img {
+/*
 		opacity:            0.85;
 		-webkit-transition: all 0.5s ease-in-out;
 		   -moz-transition: all 0.5s ease-in-out;
 		      -o-transition:  all 0.5s ease-in-out;
 		        transition: all 0.5s ease-in-out;
+*/
 	}
 
 		a:hover img { opacity: 1; }
@@ -1141,7 +1182,7 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 
 	@media only screen and (min-width: 800px) {
 
-		#branding { width: 42.85%; max-width: 450px; }
+		#branding { width: 30.85%; max-width: 300px; }
 	}
 
 		#site-title {
@@ -1180,6 +1221,8 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 	font-size:   0.9375rem;
 	font-family: 'Open Sans', sans-serif;
 	text-align:  center;
+}
+#footer .wrap {
     border-top: #cdcdcd 1px solid;
 }
 
@@ -2166,7 +2209,12 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 /* === MIN-WIDTH 800PX === */
 
 @media only screen and (min-width: 800px) {
-
+    #menu-primary li {
+        border-right: #4b4b4b 1px solid;
+}
+#menu-primary .wrap {
+    border-left: #4b4b4b 1px solid;
+}
 	.menu > .wrap { display: block !important; }
 
 	.menu-toggle { display: none; }
@@ -2300,8 +2348,8 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 	/* ====== Primary and Secondary Menus ====== */
 
 	#menu-secondary {
-		width:      57.15%;
-		max-width:  37.5rem; /* 600 */
+		width:      67.15%;
+		max-width:  42.5rem; /* 600 */
 		margin:     12px 0 12px 0;
 	}
 
@@ -2355,7 +2403,8 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 
 			/* List items */
 
-			.ltr #menu-secondary li { margin-left: 24px; }
+			.ltr #menu-secondary li { padding-left: 20px; padding-right: 16px;border-left: 1px solid #dad9d7; }
+
 			.rtl #menu-secondary li { margin-right: 24px; }
 
 				.ltr #menu-secondary li li { margin-left: 0; }
@@ -2374,12 +2423,13 @@ html #container #menu-social li a::before { color: #9e9e9e;border: 1px solid #cc
 
 				#menu-primary li a { padding: 0.75rem 0 0.75rem; }
 
-					.ltr #menu-primary li a { margin-right: 1.5rem; }
+					.ltr #menu-primary li a { margin-right: 1.0rem;margin-left: 1.0rem; }
 					.rtl #menu-primary li a { margin-left:  1.5rem; }
-
+                #menu-secondary li {
+                    margin: 0.75rem 0;
+                }
 				#menu-secondary li a {
 					margin:          0;
-					padding:         0.75rem 0;
 					font-weight:     600;
 				}
 
@@ -2868,7 +2918,16 @@ select:focus {
 .gallery-icon a:hover img { background: #f3f3f3; }
 
 #menu-primary .menu-toggle { color: rgba( 255, 255, 255, 0.75 ); }
-
+@media only screen and (min-width: 799px) {
+    body #menu-secondary li a {
+        font-size: 18px;
+        /*font-weight: bold;*/
+        font-family: "NanumGothicExtraBold" !important;
+    }
+    body #menu-secondary li a:hover {
+        text-decoration: none;
+    }
+}
 #menu-primary li a,
 #menu-secondary li li a { color: rgba( 255, 255, 255, 0.75 ); }
 
@@ -2932,7 +2991,7 @@ select:focus {
 li.ping,
 .comment-content { background: #f9f9f9; }
 
-#footer a { color: rgba( 255, 255, 255, 0.75 ); }
+#footer a { color: #333333; }
 
 .clean-my-archives .comments-number { color: #aaa; }
 
@@ -3084,3 +3143,121 @@ blockquote a:hover,
 /********************************************************************************************************
  * This concludes the fun area for making your child theme unique.
  ********************************************************************************************************/
+
+#footer .wrap {
+    padding-top:27px;
+    font-size: 0.75rem;
+}
+#footer .bottomInfo .wrap {
+    padding-top:0px;
+    border-top: none;
+    margin-bottom: 0.6rem;    
+}
+#footer .blogo {
+    float: left;
+    width: 250px;
+    text-align: center;
+}
+#footer .blogo img {
+    margin: 0 auto;
+}
+#footer .bottomInfo {
+    float: left;
+    margin-top: -5px;
+}
+#footer .fRight {
+    float: right;
+    margin-right: 25px;
+}
+#footer a {
+    margin-right:7px;
+}
+#footer a:hover {
+    color:#009abf;
+}
+#footer .menu-toggle {
+    display: none;
+}
+#footer .menu ul {
+    margin: 0;
+    padding: 0;
+}
+#footer .menu li {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media only screen and ( max-width: 949px ) {
+    #footer .blogo {
+        float: none;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    #footer .bottomInfo {
+        float: none;
+    }
+    #footer .fRight {
+        float: none;
+        margin-right: 0px;
+    }
+    #footer .menu ul {
+        text-align: center;
+    }
+}
+@media only screen and ( max-width: 1150px ) {
+    #footer .fRight {
+        display: none;
+    }
+}
+@media only screen and ( min-width: 950px ) and ( max-width: 1279px ) {
+    #container     > .wrap,
+	#footer        > .wrap,
+	#menu-primary > .wrap {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #footer .blogo {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+html body .main_lasteat {
+    margin-left: 0;
+    padding-bottom: 25px;
+}
+.main_lasteat li {
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    width: 25%;
+    font-size: 0.65em;
+    position: relative;
+    left: 105px;
+    top: 0;
+    height: 88px;
+}
+.main_lasteat li .img-hyperlink {
+    width: 100px;
+    text-align:center;
+    position: absolute;
+    top: 0;
+    left: -105px;
+}
+.main_lasteat li .main_lasteat_thumb {
+    max-width: 100px;
+    height: 88px;
+}
+
+.main_lasteat a {
+    position: absolute;
+    right: 115px;
+    bottom: 0px;
+    color: #333333;
+}
+.main_lasteat .lcp_title,
+.main_lasteat .article_date {
+    display: block;
+    border-bottom: none;
+    position: static;
+}
